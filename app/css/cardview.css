@@ -1,0 +1,49 @@
+.btn_card_report{
+	width:10em;
+	margin: 23px;
+	padding: 10px;
+	background-color: #8414FF;
+	border-radius: 5px;
+	color: white;
+	font-weight: 100;
+	border-style: hidden;
+}
+.btn_card_report:hover{
+	width:10em;
+	margin: 23px;
+	padding: 10px;
+	background-color: #4D5968;
+	border-radius: 5px;
+	color: white;
+	font-weight: 100;
+	border-style: hidden;
+}
+.btn_card_report_div{
+	display: inline;
+	padding: 10px;
+}
+.btn_card_report:disabled{
+	background-color: #575a5e;
+	border-radius: 5px;
+	color: white;
+	font-weight: 100;
+	border-style: hidden;
+}
+.cardviewclassdisabled{
+	margin: -35px;
+	padding: 65px;
+	background-color: #d6d8d4 !important;
+	color: #535b66 !important;
+
+}
+.cardviewclass{
+	margin: 20px;
+	
+	padding: 10px;
+}
+.abc{
+	text-decoration: underline;
+	font-weight: bold;
+	background-color: #d6d8d4;
+	border-radius: 5px;
+}

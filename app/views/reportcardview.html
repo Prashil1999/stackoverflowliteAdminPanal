@@ -1,0 +1,67 @@
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+ 
+                <div class="mdc-card" >
+ 
+                 <div class="{{cardcss[report.index]}}" ng-disabled="report.view || isDisabled[report.index]"  >
+                  <table>
+                  <tr>
+                  <h6 align="center">-----======= Report =======-----</h6>
+                  </tr>
+                  <tr>
+                  <td><strong>Report by User</strong></td>
+                   <td><strong>:</strong></td>
+                   <td>{{report.usernamebyreport}}</td>
+                   </tr>
+                   <tr>
+                    <td><strong>Reporting User-id</strong></td>
+                   <td><strong>:</strong></td>
+                   <td><a class="abc" href="">{{report.reportedId}}</a></td>
+                   </tr>
+                   
+                   
+                   <tr>
+                   	<td><strong>Report on</strong></td>
+                   <td><strong>:</strong></td>
+                   <td>{{report.reporton}}</td>
+                   </tr>
+                   
+                   <tr ng-show="report.ansId">
+                    <td><strong>Reported answer-id</strong></td>
+                   <td><strong>:</strong></td>
+                   <td><a class="abc" href="">{{report.ansId}}</a></td>
+                   </tr>
+                   
+                   <tr ng-show="report.quesId">
+                    <td><strong>Reported Question-id</strong></td>
+                   <td><strong>:</strong></td>
+                   <td><a class="abc" href="">{{report.quesId}}</a></td>
+                   </tr>
+
+                    <tr ng-show="report.userId">
+                    <td><strong>Reported User-id</strong></td>
+                   <td><strong>:</strong></td>
+                   <td><a class="abc" href="">{{report.userId}}</a></td>
+                   </tr>
+                   
+                    <tr>
+                    <td><strong>Reported Time</strong></td>
+                   <td><strong>:</strong></td>
+                   <td>{{report.addedTime}}</td>
+                   </tr>
+                    <div class="btn_card_report_div">
+                    <td><button 
+                    class="btn_card_report" ng-click="blocked(report)" ng-disabled="report.view  || isDisabled[report.index]">Block</button>
+                  </td>
+                  <td> </td>
+                  <td>
+                  <button class="btn_card_report" ng-click="disablecard(report.reportId,report.index)" ng-disabled="report.view  || isDisabled[report.index]">Ignore</button>
+                 	</td>
+                 	</tr>
+                  <tr>
+                  <h4 align="center" ng-if="report.view  || isDisabled[report.index]">Ignored</h4>
+                  </tr>
+                 	</table>
+                 </div>
+                 </div>
+               </div>
+              </div>
