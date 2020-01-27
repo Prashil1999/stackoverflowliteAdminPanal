@@ -1,8 +1,20 @@
-var reportApp=angular.module('reportApp',[]);
-reportApp.controller('reportController',['$scope','$http',function($scope,$http){
+var reportApp=angular.module('reportApp',[ ]);
+
+ reportApp.controller('reportController',['$scope','$http',function($scope,$http){
 	
 	$scope.isDisabled=[];
 	$scope.cardcss=[];
+
+	$scope.getque = function(ansid){
+		$http({
+			method : 'POST',
+			url    :'http://localhost/stackoverflowliteAdminPanal/index.php/welcome/getque', 
+			data   :{ansId:ansid},
+			dtatype:'JSON'
+
+		});
+
+	}
 	
 	$scope.disablecard = function(reportid ,index){
 		$scope.isDisabled[index]=true;
@@ -40,6 +52,8 @@ reportApp.controller('reportController',['$scope','$http',function($scope,$http)
 		$scope.reports=res.data;	
 		for(var i=0;i<res.data.length;i++){
 			$scope.isDisabled[res.data[i]['index']]=false;
+			$scope.day=new Date(res.data[i]['addedTime']);
+			$scope.date=moment($scope.day).fromNow();
 			if(res.data[i]['view']==true){
 				$scope.cardcss[res.data[i]['index']]='cardviewclassdisabled';
 			}else{

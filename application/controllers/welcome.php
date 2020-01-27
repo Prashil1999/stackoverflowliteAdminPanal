@@ -54,6 +54,23 @@ class Welcome extends CI_Controller {
 	}
 
 
+	public function get_session()
+	{	$name=$this->session->set_userdata('name','prashil gupta');
+		$name=$this->session->userdata('name');
+		echo $name;
+	}
+
+
+	public function getque()
+	{	
+		$report=json_decode(file_get_contents("php://input"),true);
+		var_dump($report);
+		$this->load->model('report_m');
+		$res= $this->report_m->getQues($report['ansId']);
+		 echo  $res;
+	}
+
+
 }
 ?>
 

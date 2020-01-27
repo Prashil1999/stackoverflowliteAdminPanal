@@ -15,7 +15,7 @@
                    <tr>
                     <td><strong>Reporting User-id</strong></td>
                    <td><strong>:</strong></td>
-                   <td><a class="abc" href="">{{report.reportedId}}</a></td>
+                   <td><a class="abc"href="http://localhost/stackoverflowlite/app/views/index.html#/Profile/{{report.reportedId}}">{{report.reportedId}}</a></td>
                    </tr>
                    
                    
@@ -28,25 +28,27 @@
                    <tr ng-show="report.ansId">
                     <td><strong>Reported answer-id</strong></td>
                    <td><strong>:</strong></td>
-                   <td><a class="abc" href="">{{report.ansId}}</a></td>
+                   <td><a class="abc" href="http://localhost/stackoverflowlite/app/views/index.html#/QuestionView/{{ansId}}" ng-click="getque(report.ansId)">{{report.ansId}}</a></td>
                    </tr>
                    
                    <tr ng-show="report.quesId">
                     <td><strong>Reported Question-id</strong></td>
                    <td><strong>:</strong></td>
-                   <td><a class="abc" href="">{{report.quesId}}</a></td>
+
+                   <!-- ui-sref="Quesview({ qid: report.quesId })" -->
+                   <td><a class="abc" href="http://localhost/stackoverflowlite/app/views/index.html#/QuestionView/{report.quesId}}" >{{report.quesId}}</a></td>
                    </tr>
 
                     <tr ng-show="report.userId">
                     <td><strong>Reported User-id</strong></td>
                    <td><strong>:</strong></td>
-                   <td><a class="abc" href="">{{report.userId}}</a></td>
+                   <td><a class="abc" href="http://localhost/stackoverflowlite/app/views/index.html#/Profile/{{report.userId}}">{{report.userId}}</a></td>
                    </tr>
                    
                     <tr>
                     <td><strong>Reported Time</strong></td>
                    <td><strong>:</strong></td>
-                   <td>{{report.addedTime}}</td>
+                   <td>{{date }}</td>
                    </tr>
                     <div class="btn_card_report_div">
                     <td><button 

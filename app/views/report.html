@@ -20,6 +20,8 @@
           
           <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script> 
           <script src="http://localhost/stackoverflowliteAdminPanal/app/angularjs/report.js"></script>
+          <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.2/angular.js" data-semver="1.4.2"></script>
+    <script data-require="moment.js@*" data-semver="2.10.2" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
 </head>
 <body ng-app='reportApp' ng-controller='reportController'>
 <script src="http://localhost/stackoverflowliteAdminPanal/temp/assets/js/preloader.js"></script>
@@ -245,7 +247,7 @@
                       <i class="mdi mdi-logout-variant text-primary"></i>                      
                     </div>
                     <div class="item-content d-flex align-items-start flex-column justify-content-center">
-                      <h6 class="item-subject font-weight-normal">Logout</h6>
+                      <h6 class="item-subject font-weight-normal" ng-click="logout()">Logout</h6>
                     </div>
                   </li>
                 </ul>

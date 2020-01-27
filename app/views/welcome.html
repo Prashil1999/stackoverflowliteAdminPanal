@@ -22,8 +22,10 @@
           
           <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script> 
           <script src="http://localhost/stackoverflowliteAdminPanal/app/angularjs/dash.js"></script>
+
+
 </head>
-<body>
+<body ng-app="dashApp">
 <script src="http://localhost/stackoverflowliteAdminPanal/temp/assets/js/preloader.js"></script>
   <div class="body-wrapper">
     <!-- partial:partials/_sidebar.html -->
@@ -93,7 +95,7 @@
                   <span class="figure">
                     <img src="http://localhost/stackoverflowliteAdminPanal/temp/assets/images/faces/face1.jpg" alt="user" class="user">
                   </span>
-                  <span class="user-name">{{admin}}</span>
+                  <span class="user-name">{{adminName}}</span>
                 </span>
               </button>
               <div class="mdc-menu mdc-menu-surface" tabindex="-1">
@@ -261,7 +263,7 @@
       <div class="page-wrapper mdc-toolbar-fixed-adjust">
         <main class="content-wrapper">
           <div class="mdc-layout-grid">
-            <div class="mdc-layout-grid__inner" ng-app="dashApp" ng-controller="dashController">
+            <div class="mdc-layout-grid__inner"  ng-controller="dashController">
               <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet">
                 <div class="mdc-card info-card info-card--success">
                   <div class="card-inner">
@@ -352,14 +354,14 @@
               <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-8">
                 <div class="mdc-card">
                   <div class="d-flex justify-content-between align-items-center">
-                    <h4 class="card-title mb-2 mb-sm-0">Revenue by location</h4>
+                    <h4 class="card-title mb-2 mb-sm-0">Users by location</h4>
                     <div class="d-flex justtify-content-between align-items-center">
                       <p class="d-none d-sm-block text-muted tx-12 mb-0 mr-2">Goal reached</p>
                       <i class="material-icons options-icon">more_vert</i>
                     </div>
                   </div>
                   <div class="d-block d-sm-flex justify-content-between align-items-center">
-                    <h6 class="card-sub-title mb-0">Sales performance revenue based by country</h6>
+                    <h6 class="card-sub-title mb-0">Number of users based by country</h6>
                     <div class="mdc-tab-wrapper revenue-tab mdc-tab--secondary"> 
                       <div class="mdc-tab-bar" role="tablist">
                         <div class="mdc-tab-scroller">
